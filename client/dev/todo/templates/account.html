@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>account</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+<div ng-app="acc" ng-controller="accountctrl">
+<h1>Register</h2>
+<div class="form-container">
+ <form method="post">
+  <div class ="form-group">
+   <label for="firstname">First Name</label>
+   <input type="text" id="firstname" class="form-control" ng-model="user.firstname" required />
+  </div>
+  <div class ="form-group">
+   <label for="lastname">Last Name</label>
+   <input type="text" id="lastname" class="form-control" ng-model="user.lastname" required />
+  </div>
+  <div class ="form-group">
+   <label for="username">User Name</label>
+   <input type="text" id="firstname" class="form-control" ng-model="user.username" required />
+  </div>
+  <div class ="form-group">
+   <label for="password">Password</label>
+   <input type="text" id="password" class="form-control" ng-model="user.password" required />
+  </div>
+
+  <div class="form-group">
+       <button class="btn btn-primary" ng-click="saveuser()">Save</button>
+<h2>{{msg}}</h2>
+  </div>
+ </form>
+ 
+</div>
+</div>
+
+<script>
+var app = angular.module('acc',[]);
+app.controller('accountctrl', function ($scope)
+{
+$scope.user={firstname:'',lastname:'',username:'',password:''};
+
+$scope.saveuser=function()
+{
+
+$scope.msg="request sent";
+}
+
+});
+</script>
+</body>
+</html>
+
+

@@ -6,8 +6,8 @@
     .factory('TodoDAO', [
       '$q',
       'Todo',
-      'TodoResource','UserResource',
-      function($q, Todo, TodoResource,UserResource) {
+      'TodoResource',
+      function($q, Todo, TodoResource) {
         var TodoDAO = function() {};
 	TodoDAO.prototype.createSignup = function(x) {		
 	  console.log("in DAO_client");
@@ -20,11 +20,11 @@
             return $q.reject(error);
           };
 
-          return UserResource
-            .save(x)
-            .$promise
-            .then(_onSuccess)
-            .catch(_onError);
+          //return UserResource
+            //.save(x)
+            //.$promise
+            //.then(_onSuccess)
+            //.catch(_onError);
         };
         TodoDAO.prototype.getAll = function() {
           var _onSuccess = function(todos) {

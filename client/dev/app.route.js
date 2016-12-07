@@ -13,9 +13,20 @@
           })
 	  .when('/register', {
             templateUrl: 'signup/templates/signup.html',
-            controller: 'myCtrl'
+            controller: 'myCtrl',
+	    controllerAs: 'register'
             
           })
+	   .when('/verify', {
+          templateUrl: 'signup/templates/verif.html',
+          controller: 'verifCtrl',
+          controllerAs: 'verify'
+    })    
+            .when('/login', {
+          templateUrl: 'signup/templates/login.html',
+          
+    })
+
           .otherwise({
             redirectTo: '/'
           });

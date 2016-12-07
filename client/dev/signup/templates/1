@@ -5,34 +5,30 @@
 </div>
 <div class="todo-panel">
 <form name="signupform" ng-submit="myFunc()">
-<br>
-<br>
   <ng-messages for="signupform.fname.$error">
 	<ng-message when="required" class="error-msg">Firstname is required</ng-message>
   </ng-messages>
-<br>
-  <input type="text" name="fname" ng-model="register.firstname" placeholder="Firstname" class="form-control" required><br>
-<br>
-  <input type="text" ng-model="register.lastname" placeholder="Lastname" class="form-control" ><br>
+  <input type="text" name="fname" ng-model="fname" placeholder="Firstname" class="form-control" required><br>
+  <input type="text" ng-model="lname" placeholder="Lastname" class="form-control" ><br>
   <ng-messages for="signupform.aemail.$error">
         <ng-message when="required" class="error-msg">Email ID is required</ng-message>
-  </ng-messages><br>
-  <input type="email" name="aemail" ng-model="register.email" placeholder="example@tatacommunications.com" class="form-control" required><br>
+  </ng-messages>
+  <input type="email" ng-model="aemail" placeholder="Email ID:example@tatacommunications.com" class="form-control" required><br>
         <ng-messages for="signupform.uname.$error">
           <ng-message when="required" class="error-msg">Username field is required</ng-message>
           <ng-message when="minlength" class="error-msg">Min of 8 chars</ng-message>
 
-        </ng-messages><br>
+        </ng-messages>
 
-  <input type="username" name="uname"ng-model="register.username" placeholder="Username:example08" ng-minlength = "8" class="form-control" required><br>
+  <input type="username" name="uname"ng-model="uname" placeholder="Username:example08" ng-minlength = "8" class="form-control" required><br>
        <ng-messages for="signupform.pass.$error">
           <ng-message when="required" class="error-msg">Password field is required</ng-message>
           <ng-message when="minlength" class="error-msg">password must contain at least one uppercase character one lowercase character and one number and 8 chars</ng-message>
 
-        </ng-messages><br>
+        </ng-messages>
 
-  <input type="password" name="pass" ng-model="register.password" placeholder="Password" class="form-control" ng-minlength="8"required><br>
-        <br>
+  <input type="password" name="pass" ng-model="apassword" placeholder="Password" class="form-control" ng-minlength="8"required><br>
+        
     <div class="footer-container">
         <button type="submit"
                 id="submit-todo-button"
@@ -41,16 +37,14 @@
       </div>
 
   <p id="demo"></p><br>
-  {{register.regi}}<br>
-  {{register.ret}}<br>
-  {{register.error}}<br>{{register.errorr}}<br>
-               <a href='/verify'>{{register.hash}}</a>
+  {{regi}}<br>
+  {{ret}}<br>
+  {{error}}<br>{{errorr}}<br>
 
 </form>
-
+click here to verify : <a href='/verify'>verify</a>
 
 </div>
-
 
 
 

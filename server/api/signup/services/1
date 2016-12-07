@@ -1,0 +1,42 @@
+"use strict";
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const Promise = require('bluebird');
+const signupSchema = require('../model/signup-model');
+const Verify = require('../verify/verify');
+const _ = require('lodash');
+var bcrypt = require('bcryptjs');
+var Req,Rand;
+module.exports.UserDetails = function(req,rand)
+{
+Req = req;
+Rand = rand;
+}
+
+signupSchema.statics.create = (otp) => {
+        console.log('frm verify-dao');
+        console.log(Req);
+ var v = Verify.check(otp,Rand);
+   return new Promise((resolve, reject) => {
+      if (!_.isObject(signup))
+          return reject(new TypeError('signup is not a valid object.'));
+         let _signup = new pill(Req);
+         console.log(_signup)
+         _signup.save((err, saved) => {
+
+            err?reject(err)
+                :resolve(saved);console.log('success');
+
+
+     ;
+
+    })
+
+const pill  = mongoose.model('pill', signupSchema);
+
+module.exports = pill;
+
+
+
+
+

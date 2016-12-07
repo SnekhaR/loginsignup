@@ -1,4 +1,3 @@
-
 ;(function(ng) {
   'use strict';
 
@@ -12,7 +11,10 @@
 	console.log("in DAO");
 	console.log(x);
           var _onSuccess = function(x) {
-            return(x);
+            console.log('return dao');
+            console.log("sent bitch");
+            console.log(x);
+	   
           };
 
           var _onError = function(error) {
@@ -25,8 +27,6 @@
             .then(_onSuccess)
             .catch(_onError);
         }
-return new SignupDAO;
-}
-]);
-
+  return new SignupDAO;
+}]);
 }(window.angular));

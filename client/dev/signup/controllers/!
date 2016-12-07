@@ -5,20 +5,18 @@
 
 ng.module('MyApp').controller("myCtrl",['$scope','$resource','$log','Signup',
       'SignupDAO',function($scope,$resource,$log,Signup,SignupDAO) {
-var vm = this;
+
   $scope.myFunc = function () {
 
           
         
           
           var x  = new Object();
-	  var y  = new Object();
-
-          x.firstname = vm.firstname;
-          x.lastname = vm.lastname;
-          x.email = vm.email;
-          x.username = vm.username;
-          x.password = vm.password;
+          x.firstname = $scope.fname;
+          x.lastname = $scope.lname;
+          x.email = $scope.aemail;
+          x.username = $scope.uname;
+          x.password = $scope.apassword;
           var valid = Signup.isValid(x.password);
           console.log(valid);  
           var usernamevalid = Signup.username(x.username);
@@ -28,19 +26,20 @@ var vm = this;
           var sumup = (valid && usernamevalid);
           if(sumup)
           {
-            vm.regi= "please wait...";
+            $scope.regi = "Please Wait...";
           SignupDAO
             .create(x)
-            .then(function(y)
+            .then(function()
             {
               console.log('return clientController');
-              console.log(y);
-                vm.ret = "verification email is sent to the Mail ID mentioned in the above form";
-		vm.regi = "";
-		
+              
+                $scope.ret = "verification email is sent to the Mail ID mentioned in the above form";
+		$scope.regi = "";
+		$scope.hideForm = true;
 
               
             })
+
 
                 
             .catch($log.error);
@@ -49,23 +48,22 @@ var vm = this;
           }
          else
          {
-          vm.error = "Error Occurred :-/";
-	  vm.errorr="Please Try Again";
+          $scope.error = "Error Occurred :-/";
+	  $scope.errorr="Please Try Again";
         }
          
        
 
-      
+      $scope.myTxt = "request for " + $scope.fname ;
 
-      vm.firstname="";
-      vm.lastname="";
-      vm.email="";
-      vm.username="";
-      vm.password="";
+      $scope.fname="";
+      $scope.lname="";
+      $scope.aemail="";
+      $scope.uname="";
+      $scope.apassword="";
     
 }
 
 }]);
 }(window.angular));
- 
 

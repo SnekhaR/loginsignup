@@ -3,7 +3,7 @@
 ;(function(ng){
 'use strict';
 
-ng.module('MyApp').controller("myCtrl",['$scope','$resource','$log','Signup',
+ng.module('Dashboard').controller("myCtrl",['$scope','$resource','$log','Signup',
       'SignupDAO',function($scope,$resource,$log,Signup,SignupDAO) {
 
   $scope.myFunc = function () {

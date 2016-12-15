@@ -1,6 +1,6 @@
 ;(function(ng){
 'use strict';
-ng.module('MyApp').controller("verifCtrl",['$log','$routeParams','VerifDAO', function($log,$routeParams,VerifDAO)
+ng.module('Dashboard').controller("verifCtrl",['$log','$routeParams','VerifDAO', function($log,$routeParams,VerifDAO)
 {
 	
       

@@ -1,7 +1,7 @@
 ;(function(ng) {
   'use strict';
 
-  ng.module('MyApp')
+  ng.module('Dashboard')
     .factory('signup', [
       function() {
         var signup = function() {

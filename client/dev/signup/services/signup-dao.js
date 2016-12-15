@@ -1,7 +1,7 @@
 ;(function(ng) {
   'use strict';
 
-  ng.module('MyApp')
+  ng.module('Dashboard')
     .factory('SignupDAO', [
       '$q','SignupResource',
       function($q,SignupResource) {

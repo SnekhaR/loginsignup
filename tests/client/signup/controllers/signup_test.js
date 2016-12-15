@@ -4,7 +4,7 @@ describe('signup', function() {
     var _scope;
     var CONTROLLER_NAME = 'signup as ctrl';
 
-    beforeEach(module('MyApp'));
+    beforeEach(module('Dashboard'));
 
     beforeEach(inject(function($injector) {
       _scope = $injector.get('$rootScope').$new();

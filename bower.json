@@ -1,8 +1,8 @@
 {
-  "name": "MyApp",
-  "main": "MyApp.js",
+  "name": "Dashboard",
+  "main": "Dashboard.js",
   "version": "0.0.1",
-  "homepage": "https://github.com//MyApp",
+  "homepage": "https://github.com//Dashboard",
   "authors": ["SnekhaR <email>"],
   "description": "desc",
   "keywords": [],

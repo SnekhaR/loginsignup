@@ -1,0 +1,59 @@
+
+<div class="container">
+
+
+<h2 class="page-header">Tata Communications Portal</h2>  
+      <div class="title-container">
+        <h1 class="text-muted text-center"><span class="fa fa-sign-in"></span>  Login</h1>
+      </div>
+      <hr />
+       <form name="loginform" ng-submit="loginctrl.authenticate(loginctrl.user)">
+
+     <label>Username</label>
+    <input type="text"
+               class="form-control input-lg"
+               placeholder="Username"
+               ng-model="loginctrl.user.username"
+               name="Username"
+               required
+               autofocus />
+
+ <ng-messages for="loginform.Username.$error">
+          <ng-message when="required" class="error-msg">Username field is required</ng-message>
+        </ng-messages>
+<br></br>
+
+
+     <label>Password</label>
+    <input type="password"
+               class="form-control input-lg"
+               placeholder="Password"
+               ng-model="loginctrl.user.password"
+               name="Password"
+               required
+               autofocus />
+
+      <ng-messages for="loginform.Password.$error">
+          <ng-message when="required" class="error-msg">Password field is required</ng-message>
+        </ng-messages>
+
+
+        <br /><br />
+      
+        <!--ng-if="!todoCtrl.todos.length"
+          <h3 class="text-muted text-center">Nothing to do. Go play outside :D</h3>
+     ng-disabled="loginform.$invalid || !loginctrl.user.isValid()"should come with the submit for some validation
+    </div-->
+
+  
+        <button type="submit"
+         class="btn btn-success btn-block btn-lg"      
+         > LOGIN </button>
+    <hr />
+    </form>
+<button onclick="location.href = '/register';" id="myButton" class="float-left submit-button" >Forgot to register??? Click Me</button>
+
+
+</div>
+          
+

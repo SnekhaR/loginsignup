@@ -1,13 +1,12 @@
-
 ;(function(ng) {
   'use strict';
 
   ng.module('Dashboard')
-    .factory('SignupResource', [
+    .factory('loginresource', [
       '$resource',
       function($resource) {
-		  console.log($resource);
-        var _url = '/api/signup';
+        var _url = '/api/authenticate';
+	console.log("clientresource");
         var _params = {};
         var _methods = {};
 

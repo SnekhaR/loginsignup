@@ -1,7 +1,7 @@
 {
   "generator-ng-fullstack": {
     "username": "SnekhaR",
-    "appName": "MyApp",
+    "appName": "Dashboard",
     "stack": "fullstack",
     "server": "node",
     "client": "ng1",

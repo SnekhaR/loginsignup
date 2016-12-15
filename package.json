@@ -1,7 +1,7 @@
 {
-  "name": "MyApp",
+  "name": "Dashboard",
   "version": "0.0.1",
-  "main": "src/MyApp.js",
+  "main": "src/Dashboard.js",
   "scripts": {
     "start": "node index",
     "watch": "gulp",
@@ -17,14 +17,19 @@
     "bcryptjs": "^2.3.0",
     "bluebird": "^3.3.4",
     "body-parser": "^1.5.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
     "express": "~4.14.0",
     "express-content-length-validator": "1.0.0",
+    "express-session": "^1.14.2",
     "helmet": "^2.1.1",
     "lodash": "^4.6.1",
     "mongoose": "^4.4.7",
     "morgan": "^1.5.2",
     "newrelic": "^1.18.2",
-    "nodemailer": "^0.7.1"
+    "nodemailer": "^0.7.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "aliv": "^1.2.0",
@@ -66,14 +71,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SnekhaR/MyApp.git"
+    "url": "https://github.com/SnekhaR/Dashboard.git"
   },
   "author": "SnekhaR",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SnekhaR/MyApp/issues"
+    "url": "https://github.com/SnekhaR/Dashboard/issues"
   },
-  "homepage": "https://github.com/SnekhaR/MyApp",
+  "homepage": "https://github.com/SnekhaR/Dashboard",
   "engines": {
     "node": "stable"
   }

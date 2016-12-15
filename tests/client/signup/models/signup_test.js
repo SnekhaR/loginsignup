@@ -3,7 +3,7 @@
 describe('signup', function() {
   var _signup;
 
-  beforeEach(module('MyApp'));
+  beforeEach(module('Dashboard'));
 
   beforeEach(inject(function($injector) {
     _signup = $injector.get('signup');

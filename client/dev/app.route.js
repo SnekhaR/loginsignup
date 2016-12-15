@@ -1,12 +1,12 @@
 ;(function(ng) {
   'use strict';
 
-  ng.module('MyApp')
+  ng.module('Dashboard')
     .config([
       '$routeProvider',
       function($routeProvider) {
         $routeProvider
-          .when('/', {
+          .when('/todo', {
             templateUrl: 'todo/templates/todo.html',
             controller: 'TodoController',
             controllerAs: 'todoCtrl'
@@ -23,7 +23,9 @@
           controllerAs: 'verify'
     })    
             .when('/login', {
-          templateUrl: 'signup/templates/login.html',
+          templateUrl: 'login/templates/login.html',
+	  controller: 'login-controller',
+	  controllerAs: 'loginctrl'
           
     })
 
